@@ -19,6 +19,9 @@ void RingBuffer_Init(RingBuffer *rb);
 /* Data Operations */
 int RingBuffer_Push(RingBuffer *rb, uint8_t data);
 int RingBuffer_Pop(RingBuffer *rb, uint8_t *data);
+bool RingBuffer_WriteAtomic(RingBuffer *rb, const uint8_t *data, uint16_t data_length);
+uint16_t RingBuffer_Write(RingBuffer *rb, const uint8_t *data, uint16_t data_length);
+uint16_t RingBuffer_Read(RingBuffer *rb, uint8_t *data, uint16_t data_length);
 
 /* Status Checks */
 bool RingBuffer_EmptyCheck(const RingBuffer *rb);
