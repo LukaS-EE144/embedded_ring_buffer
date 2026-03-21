@@ -73,7 +73,7 @@ int RingBuffer_Pop(RingBuffer *rb, uint8_t *data)
  * @param data_length number of bytes to be written in bulk
  * @return true if the write was succesful
  */
-bool RingBuffer_WriteAtomic(RingBuffer *rb, const uint8_t *data, uint16_t data_length)
+bool RingBuffer_AtomicWrite(RingBuffer *rb, const uint8_t *data, uint16_t data_length)
 {
     if(RingBuffer_CurrentCapacity(rb) < data_length)
         return false;

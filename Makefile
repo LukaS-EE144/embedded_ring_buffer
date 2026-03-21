@@ -3,7 +3,7 @@ CC = gcc
 CFLAGS = -Wall -Wextra -Wpedantic -std=c11 -Iinclude -O2
 
 SRC = src/RingBuffer.c
-TEST = tests/RingBuffer_test.c
+TEST = tests/RingBuffer_test.c tests/test_framework.c
 
 ifeq ($(OS),Windows_NT)
     TARGET = RingBuffer_test.exe
